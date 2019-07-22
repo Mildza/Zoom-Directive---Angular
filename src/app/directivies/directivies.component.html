@@ -1,0 +1,28 @@
+<h1 class="mt-4">
+  ZOOM Directive
+</h1>
+<h5 class="mb-3">
+  Making custom Zoom directive in Angular using HostListener, Renderer2, HostBinding, Input, BehaviorSubject.
+</h5>
+<hr />
+<span>
+  <img zoom step="20" src="../../assets/mv.jpg" />
+</span>
+<p class="mt-4">We can set default zoom step putting step atribute and value in img tag.</p>
+<p>Zoom on scroll, reset on click.</p>
+<pre>&lt;img zoom step="20" src="picture.jpg"/&gt;</pre>
+<hr />
+<p>Or we can set manualy zoom level by slider.</p>
+{{ value }}
+<div class="slidecontainer">
+  <input
+    type="range"
+    min="1"
+    max="100"
+    value="50"
+    [(ngModel)]="value"
+    class="slider"
+    id="myRange"
+    (click)="changeZoom(value)"
+  />
+</div>
